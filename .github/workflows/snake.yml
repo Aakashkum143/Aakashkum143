@@ -1,16 +1,16 @@
-name: Generate Snake
+name: Generate Snake Animation
 
 on:
-  schedule: # har 12 ghante me update
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
+  schedule: # daily run at 12am UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch: # manually trigger
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Generate Snake
@@ -19,10 +19,10 @@ jobs:
           github_user_name: aakashkum143
           outputs: dist/snake.svg
 
-      - name: Push Snake
+      - name: Push changes
         uses: EndBug/add-and-commit@v9
         with:
-          author_name: GitHub Actions
-          author_email: actions@github.com
-          message: "Generated snake animation"
+          branch: output
+          message: "Generate snake animation"
           add: "dist/snake.svg"
+
