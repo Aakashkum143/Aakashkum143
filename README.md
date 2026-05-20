@@ -23,8 +23,6 @@
 
 ## 👨‍💻 About Me
 
-<img align="right" alt="Rocket Launch" width="360" src="https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif"/>
-
 - 🎓 **B.E. in CSE** @ *Chandigarh University* | Diploma in CSE  
 - 💼 **Internship — Metacrafts:** JavaScript, Blockchain, Solidity  
 - 🧩 **Projects:**  
